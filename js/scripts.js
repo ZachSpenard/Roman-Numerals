@@ -4,11 +4,8 @@ $(document).ready(function(){
     event.preventDefault();
     var userInput = parseInt($("input#Roman-Numerals").val());
     var answerString = "";
-    if (userInput === 1) {
-      answerString = "I";
-    } else if (userInput === 5) {
-      answerString = "V";
-    } else if (userInput === 10) {
+    var userArray = []
+    if (userInput === 10) {
       answerString = "X";
     } else if (userInput === 50) {
       answerString = "L";
@@ -19,13 +16,25 @@ $(document).ready(function(){
     } else if (userInput === 1000) {
       answerString = "M";
     } else {
-      debugger;
+      // debugger;
       for (var i = 0; i < userInput; i++) {
-        if (answerString[i-1] === answerString[i-2] && answerString[i-2] === answerString[i-3] && stringLength >= 3)   {
-          answerString = "IV";
+        if (count === 3) {
+          answerString = answerString + "V";
+          answerString = answerString.replace("II","");
+        } else if (i === 4) {
+          answerString = answerString.replace("I","");
         } else {
           answerString = answerString + "I";
-          var stringLength = answerString.length;
+        }
+        if (i === 8) {
+        answerString = answerString.replace(/V/g,"");
+        answerString = answerString + "X";
+        }
+        var count = 0;
+        for(var u = 0; u <answerString.length; ++u){
+          if (answerString[u] == "I") {
+            count++;
+          }
         }
       }
     }
