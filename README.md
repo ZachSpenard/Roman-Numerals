@@ -21,7 +21,7 @@ N/A
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
 | **Program Add number values for each Roman Numeral.** | User input: "1" | Output: "I" |
-| **Program Add function for subtracting Roman Numerals for Numbers that require more than 3 consecutive identical Roman Numeral numbers.**| User Input: "4" | Output: "IV" |
+| **Program Add function for subtracting Roman Numerals for Numbers that require more than 3 consecutive identical Roman Numerals.**| User Input: "4" | Output: "IV" |
 | **Program You also have to separate ones, tens, hundreds, and thousands. In other words, 99 is XCIX, not IC. You cannot count higher than 3,999 in Roman numerals.**| Input: "99" | Output: "XCIX" |
 
 ## Support and contact details
