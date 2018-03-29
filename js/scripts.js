@@ -1,10 +1,47 @@
+function converter() {
+  for (var i = 0; i < userInput; i++) {
+    if (count === 3) {
+      answerString = answerString + "V";
+      answerString = answerString.replace("II","");
+    } else if (i === 4) {
+      answerString = answerString.replace("I","");
+    } else {
+      answerString = answerString + "I";
+    }
+    if (i === 8) {
+      answerString = answerString.replace(/V/g,"");
+      answerString = answerString + "X";
+    }
+    var count = 0;
+    for(var u = 0; u <answerString.length; ++u){
+      if (answerString[u] == "I") {
+        count++;
+      }
+    }
+  }
+}
+
+
 $(document).ready(function(){
   $("#Number-converter").submit(function(event){
     //  debugger;
     event.preventDefault();
-    var userInput = parseInt($("input#Roman-Numerals").val());
+    var userInput = $("input#Roman-Numerals").val();
     var answerString = "";
-    var userArray = []
+    var userArray = [];
+    userArray = userInput.split("");
+    for (var a = 0; a < userArray.length; a++) {
+      userArray[a] = parseInt(userArray[a]);
+    }
+    userArray = userArray.reverse();
+    var secondArray = ["I","X","C","M"];
+    var thirdArray = ["V","L","D"];
+
+    for (var b = 0; b < userArray.length; b++) {
+      userArray[b].converter();
+    }
+
+    debugger;
     if (userInput === 10) {
       answerString = "X";
     } else if (userInput === 50) {
@@ -17,27 +54,7 @@ $(document).ready(function(){
       answerString = "M";
     } else {
       // debugger;
-      for (var i = 0; i < userInput; i++) {
-        if (count === 3) {
-          answerString = answerString + "V";
-          answerString = answerString.replace("II","");
-        } else if (i === 4) {
-          answerString = answerString.replace("I","");
-        } else {
-          answerString = answerString + "I";
-        }
-        if (i === 8) {
-        answerString = answerString.replace(/V/g,"");
-        answerString = answerString + "X";
-        }
-        var count = 0;
-        for(var u = 0; u <answerString.length; ++u){
-          if (answerString[u] == "I") {
-            count++;
-          }
-        }
-      }
-    }
+  }
 
     $("#Output").text(answerString);
   });
