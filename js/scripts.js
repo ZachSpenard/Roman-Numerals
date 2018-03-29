@@ -1,5 +1,8 @@
-function converter() {
-  for (var i = 0; i < userInput; i++) {
+var answerString = "";
+convertNumber = 0;
+
+function converter(convertNumber) {
+  for (var i = 0; i < convertNumber; i++) {
     if (count === 3) {
       answerString = answerString + "V";
       answerString = answerString.replace("II","");
@@ -27,7 +30,6 @@ $(document).ready(function(){
     //  debugger;
     event.preventDefault();
     var userInput = $("input#Roman-Numerals").val();
-    var answerString = "";
     var userArray = [];
     userArray = userInput.split("");
     for (var a = 0; a < userArray.length; a++) {
@@ -38,10 +40,11 @@ $(document).ready(function(){
     var thirdArray = ["V","L","D"];
 
     for (var b = 0; b < userArray.length; b++) {
-      userArray[b].converter();
+      var convertNumber = userArray[b];
+      converter(convertNumber);
     }
 
-    debugger;
+    // debugger;
     if (userInput === 10) {
       answerString = "X";
     } else if (userInput === 50) {
