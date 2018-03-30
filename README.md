@@ -1,17 +1,16 @@
-# Track-Selector
+# Roman Numeral converter
 
-#### To help you choose an Epicodus track, March 24, 2018
+#### for converting digit to Roman-Numerals, March 29, 2018
 
-#### By Zach Spenard
+#### By Zach and Kayl
 
 ## Description
 
 This web site will help you choose the right track to go with based on your answers to the questions.
 
 ## Setup/Installation Requirements
-
-N/A
-
+* Run "git clone https://github.com/ZachSpenard/Roman-Numerals.git" in target directory
+* gh-pages link https://zachspenard.github.io/Roman-Numerals/
 ## Known Bugs
 
 N/A
