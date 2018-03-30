@@ -6,7 +6,7 @@
 
 ## Description
 
-This web site will help you choose the right track to go with based on your answers to the questions.
+Will convert numbers to Roman-Numerals.
 
 ## Setup/Installation Requirements
 * Run "git clone https://github.com/ZachSpenard/Roman-Numerals.git" in target directory
